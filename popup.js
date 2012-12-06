@@ -16,9 +16,20 @@ xhr.open('GET', 'quotes.txt', false);
 xhr.send(null);
 
 var os = navigator.platform;
+
+var quotes;
+
 // Quotes are separated by double newlines in our text document.
 // Windows is a special snowflake, so we check to see which newline characters to look for.
-var quotes = os == 'Win32' ? xhr.responseText.split('\r\n\r\n') : xhr.responseText.split('\n\n');
+
+// Debugging.  Remove alerts!
+if (os == 'Win32') {
+    alert("os == Win32!");
+    quotes = xhr.responseText.split('\r\n\r\n');
+} else {
+    alert("os == !Win32!");
+    quotes = xhr.responseText.split('\n\n');
+}
 
 /*
  * @returns randint, a random integer
