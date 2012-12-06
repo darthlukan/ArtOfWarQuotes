@@ -15,8 +15,10 @@ xhr.open('GET', 'quotes.txt', false);
 // null here means we're using synchronous, not asynchronous calls.
 xhr.send(null);
 
+var os = navigator.platform;
 // Quotes are separated by double newlines in our text document.
-var quotes = xhr.responseText.split('\n\n');
+// Windows is a special snowflake, so we check to see which newline characters to look for.
+var quotes = os == 'Win32' ? xhr.responseText.split('\r\n\r\n') : xhr.responseText.split('\n\n');
 
 /*
  * @returns randint, a random integer
