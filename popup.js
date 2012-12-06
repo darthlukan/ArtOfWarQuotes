@@ -21,11 +21,9 @@ var quotes;
 
 // Quotes are separated by double newlines in our text document.
 // Windows is a special snowflake, so we check to see which newline characters to look for.
-
-// Debugging.
+// TODO: Why does this work now but didn't with the original code?
 if (os == 'Win32') {
     quotes = xhr.responseText.split('\n\n');
-    console.log('Quotes for windows = ' + quotes);
 } else {
     quotes = xhr.responseText.split('\n\n');
 }
