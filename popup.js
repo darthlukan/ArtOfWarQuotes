@@ -22,12 +22,11 @@ var quotes;
 // Quotes are separated by double newlines in our text document.
 // Windows is a special snowflake, so we check to see which newline characters to look for.
 
-// Debugging.  Remove alerts!
+// Debugging.
 if (os == 'Win32') {
-    alert("os == Win32!");
-    quotes = xhr.responseText.split('\r\n\r\n');
+    quotes = xhr.responseText.split('\n\n');
+    console.log('Quotes for windows = ' + quotes);
 } else {
-    alert("os == !Win32!");
     quotes = xhr.responseText.split('\n\n');
 }
 
