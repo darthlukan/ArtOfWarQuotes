@@ -1,0 +1,23 @@
+body {
+    min-width:357px;
+    overflow-x:hidden;
+}
+
+p {
+    margin: 1em 0 0 0;
+    color: #767676;
+    font-size: 14px;
+}
+      
+h3 {
+    font-size: 130%;
+    font-weight: bold;
+    margin: 1.5em 0 0 0;
+    top: 0em;
+}
+
+#next {
+    background: #EBECE4;
+    color: #767676;
+    border: none;
+}

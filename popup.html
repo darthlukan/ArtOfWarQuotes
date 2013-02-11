@@ -2,31 +2,18 @@
 <html>
   <head>
     <title>Art Of War Quotes Extension Popup</title>
-    <style>
-      body {
-        min-width:357px;
-        overflow-x:hidden;
-      }
-      
-      p {
-        margin: 1em 0 0 0;
-        color: #767676;
-        font-size: 14px;
-      }
-      
-      h3 {
-        font-size: 130%;
-        font-weight: bold;
-        margin: 1.5em 0 0 0;
-        top: 0em;
-      }
-    </style>
+    
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
     
     <script type="text/javascript" src="jquery.js"></script>
     
   </head>
   <body>
-    <div id="quotes"></div>
+    <div id="quotes">
+      
+      <input type="button" id="next" name="Next" value="Next" onclick="location.reload()"/>
+      
+    </div>
     <script type="text/javascript" src="popup.js">
     </script>
   </body>
